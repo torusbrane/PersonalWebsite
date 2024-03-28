@@ -1,10 +1,13 @@
 .tile3-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Take up full viewport height */
-    text-align: center;
-    background-color: #383838;
-    /* Light grey background */
+    margin-top: 50px;
+    /* height: 100vh; */
+}
+
+.notebook-iframe {
+    width: 90vw;
+    /* Adjust based on your preference */
+    height: 70vh;
+    /* Adjust based on your preference */
+    border: none;
+    /* Removes the default iframe border */
 }
