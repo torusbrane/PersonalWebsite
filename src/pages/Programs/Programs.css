@@ -1,0 +1,68 @@
+/* Tiles layout */
+.Programs {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tile {
+    position: relative;
+    /* Needed for absolute positioning of tile-title */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease, filter 0.7s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 40vw;
+    filter: brightness(70%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+.tile-title {
+    position: absolute;
+    /* Position the title over the tile */
+    bottom: 40%;
+    /* Distance from the bottom of the tile */
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.8);
+    /*Adjust the color and spread as needed*/
+    margin: -8px; 
+    /*Counteract the spread of the shadow if needed*/
+    /* Semi-transparent darker background */
+    color: white;
+    /* Ensures the text is readable */
+    padding: 14px 18px;
+    /* Padding around the text */
+    border-radius: 5px;
+    /* Optional: rounded corners for the background */
+    text-align: center;
+    /* Centers the text */
+    width: calc(100% - 40px);
+    /* Full width of the tile with some padding */
+    max-width: 300px;
+    /* Limits the width to prevent overly wide titles */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Align center adjustments */
+    font-size: 30px;
+    /* Adjust the font size as needed */
+}
+

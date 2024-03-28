@@ -1,0 +1,10 @@
+.tile4-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Take up full viewport height */
+    text-align: center;
+    background-color: #383838;
+    /* Light grey background */
+}
