@@ -76,12 +76,46 @@
     align-items: center;
 }
 
-.section-image {
+.section-description-right {
+    color: white;
+    /* Description text color */
+    font-size: 1.5em;
+    /* Maintain the font size */
+    max-width: 1200px;
+    /* Adjust the width as needed */
+    /* margin-left: -40px; */
+    /* Keeps the container aligned to the left */
     display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
     align-items: center;
     justify-content: right;
+}
+
+.section-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
     max-width: 600px;
     min-width: 600px;
+    transition: transform 0.7s ease, filter 0.7s ease;
+    filter: brightness(70%);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-image-left {
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    max-width: 600px;
+    min-width: 600px;
+    transition: transform 0.7s ease, filter 0.7s ease;
+    filter: brightness(70%);
+    background-size: cover;
+    background-position: center;
 }
 
 .section-image img {
@@ -93,9 +127,45 @@
     border-radius: 20px;
 }
 
+.section-image-left img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    /* Adjust as needed */
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.section-image:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+.section-image-left:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
 @media (max-width: 768px) {
     .main-text {
         font-size: 18px;
         /* Adjusts text size for smaller devices */
     }
+}
+
+.overlay-text {
+    position: absolute;
+    /* Position absolutely within section-image */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Align the center of the text with the image center */
+    color: white;
+    /* Text color */
+    /* Other styles as needed */
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.8);
 }
